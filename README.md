@@ -1,7 +1,7 @@
-# Computer Diagnostics Chatbot
+# LangChain PDF Chatbot with FAISS and Ollama
 
 ## Overview
-This project is an NLP-powered chatbot designed to assist with computer troubleshooting across 14 common scenarios. It leverages semantic similarity matching with SentenceTransformer embeddings to understand user queries and provide accurate responses.
+Built an intelligent chatbot that leverages Ollama’s Gemma3 large language model with LangChain for orchestration and FAISS for vector similarity search. The system loads a PDF document, splits it into over 1000 semantic chunks using HuggingFace embeddings, and indexes them in FAISS to enable fast and accurate retrieval. The chatbot maintains chat history and vectorstore persistently, ensuring contextual conversation continuity across sessions.
 
 ![screenshot](screenshot.png)
 
