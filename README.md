@@ -3,12 +3,19 @@
 ## Overview
 This project is an NLP-powered chatbot designed to assist with computer troubleshooting across 14 common scenarios. It leverages semantic similarity matching with SentenceTransformer embeddings to understand user queries and provide accurate responses.
 
+![screenshot](screenshot.png)
+
 ## Features
-- Utilizes SentenceTransformer for semantic matching with a confidence threshold of 0.7
-- Incorporates a fallback to a large language model (LLLM) using Ollama and the Gemma3 model for improved answer accuracy
-- Semantic matching pipeline uses a single pre-trained transformer model with a domain relevance detection threshold of 0.2
-- Stores chat context and uploaded PDF documents for an enhanced user experience and continuity
-- Built with Streamlit for an interactive web interface
+
+- PDF Document Ingestion: Loads and splits PDF documents into manageable chunks for semantic processing.
+- Embedding-Based Vector Store: Uses HuggingFace sentence-transformer embeddings and FAISS for fast and efficient semantic search over document chunks.
+- LangChain RetrievalQA: Combines vector retrieval with the Ollama LLM (Gemma3 model) to provide accurate, context-aware answers from the PDF content.
+- Persistent Chat History: Saves user queries and model responses locally to maintain conversation context across sessions.
+- Local Vector Store Persistence: Saves and loads the FAISS vector index to avoid reprocessing PDFs on every startup.
+- Streamlit Web Interface: User-friendly chat UI for interactive document-based question answering.
+
+
+
 
 ## Technologies Used
 - SentenceTransformer (all-MiniLM-L6-v2)
